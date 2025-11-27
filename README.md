@@ -4,70 +4,56 @@
 
 **URL**: https://lovable.dev/projects/0e223259-e5aa-4369-9c82-3473ffd68097
 
-## How can I edit this code?
+## Brechó da Pitanga — Frontend
 
-There are several ways of editing your application.
+Este repositório contém a interface do Brechó da Pitanga, um site de vitrine/descontos construído com React + Vite e estilizado com Tailwind CSS / shadcn-ui.
 
-**Use Lovable**
+**Observações rápidas sobre os assets visuais**
+- O logo principal do cabeçalho foi substituído por `public/pitanga-sticker.png`.
+- O padrão de fundo branco está em `public/pattern-branco.svg` e é aplicado globalmente pela camada decorativa (`.page-bg`).
+- A placa superior rosa é `page-bg-top` (definida em `src/index.css`) e fica por cima do padrão de fundo.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0e223259-e5aa-4369-9c82-3473ffd68097) and start prompting.
+**Repositório remoto**: https://github.com/gustavohnr/brecho-pitanga
 
-Changes made via Lovable will be committed automatically to this repo.
+## Rodando em desenvolvimento
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requisitos: Node.js (recomendado via `nvm`) e pnpm/npm/yarn.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# instalar dependências
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# rodar servidor de desenvolvimento (Vite)
 npm run dev
+
+# build de produção
+npm run build
+
+# rodar linter/formatador (se configurado)
+npm run lint
+npm run format
 ```
 
-**Edit a file directly in GitHub**
+Abra `http://localhost:5173` (ou endereço mostrado no terminal) para ver o app.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Estrutura relevante
+- `public/` — contém `pitanga-sticker.png`, `pattern-branco.svg` e outros assets estáticos.
+- `src/index.css` — estilos globais e utilitários; contém as regras para `.page-bg` e `.page-bg-top`.
+- `src/components/Header.tsx` — header com logo animado.
+- `src/components/Navbar.tsx` — navbar superior.
+- `src/pages/` — páginas do site (Home, Sobre, Contato, Admin).
 
-**Use GitHub Codespaces**
+## Notas de deploy
+- O projeto é um app estático (Vite) — pode ser hospedado em Netlify, Vercel, GitHub Pages, Surge, etc.
+- Para deploy em Vercel/Netlify, conecte o repositório `https://github.com/gustavohnr/brecho-pitanga` e use `npm run build` como comando de build.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Próximos passos sugeridos
+- Verificar visualmente localmente (`npm run dev`) e ajustar `src/index.css` caso queira mudar escala/posição do pattern (`background-size`, `background-position`).
+- Se preferir que o pattern fique visível também através de cards, revisar as cores/fundos dos componentes (remover `bg-white` de contêineres onde for aceitável).
 
-## What technologies are used for this project?
+## Contato
+Se precisar que eu ajuste o README com mais detalhes (ex.: comandos de teste, CI/CD, ou notas sobre o design), diga o que quer acrescentar.
 
-This project is built with:
-
-- Vite
-- TypeScript
+---
+_README atualizado automaticamente pelo script local._
 - React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/0e223259-e5aa-4369-9c82-3473ffd68097) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
