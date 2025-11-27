@@ -78,7 +78,7 @@ export const Navbar = ({ onVisibilityChange }: NavbarProps) => {
           <Link to="/" className="flex-shrink-0">
             <img
               src="/pitanga-sticker.png"
-              alt="Brechó da Pitanga"
+              alt="Pitanga Brecho"
               className="w-14 h-14 md:w-16 md:h-16"
             />
           </Link>

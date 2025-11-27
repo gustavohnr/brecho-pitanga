@@ -115,7 +115,7 @@ const Admin = () => {
                 Área Administrativa
               </h1>
               <p className="font-body text-sm text-muted-foreground">
-                Brechó da Pitanga
+                Pitanga Brecho
               </p>
             </div>
           </div>

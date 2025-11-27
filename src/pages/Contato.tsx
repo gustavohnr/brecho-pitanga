@@ -47,7 +47,7 @@ const Contato = () => {
           <div className="space-y-8">
             <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
               <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
-                Sobre o Brechó da Pitanga
+                Sobre o Pitanga Brecho
               </h2>
               <p className="font-body text-foreground/80 leading-relaxed mb-4">
                 Somos apaixonadas por moda sustentável e acreditamos que cada peça tem uma história única para contar. 

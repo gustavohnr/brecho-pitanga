@@ -4,7 +4,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col items-center text-center">
         <img
           src="/pitanga-novo.svg"
-          alt="Logotipo Brechó da Pitanga"
+          alt="Logotipo Pitanga Brecho"
           className="w-16 h-auto md:w-24 mb-3"
         />
         <p className="font-bold text-sm text-white">

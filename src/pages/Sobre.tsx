@@ -9,8 +9,8 @@ const Sobre = () => {
       
       <main className="flex-1 max-w-6xl mx-auto px-4 py-20 md:py-24 w-full">
         <div className="text-center mb-12">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Sobre o Brechó da Pitanga
+            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Sobre o Pitanga Brecho
           </h1>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
             Moda sustentável, curadoria especial e peças únicas
@@ -25,8 +25,8 @@ const Sobre = () => {
             <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
               Nossa História
             </h2>
-            <p className="font-body text-foreground/80 leading-relaxed mb-4">
-              O Brechó da Pitanga nasceu da paixão por moda sustentável e do desejo de dar uma segunda 
+              <p className="font-body text-foreground/80 leading-relaxed mb-4">
+              O Pitanga Brecho nasceu da paixão por moda sustentável e do desejo de dar uma segunda 
               vida a peças especiais. Acreditamos que cada roupa tem uma história única para contar.
             </p>
             <p className="font-body text-foreground/80 leading-relaxed">

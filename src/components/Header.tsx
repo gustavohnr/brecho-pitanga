@@ -4,7 +4,7 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-2">
         <img
           src="/pitanga-sticker.png"
-          alt="Brechó da Pitanga"
+          alt="Pitanga Brecho"
           id="header-logo"
           className="w-[7rem] h-[7rem] logo-float"
         />

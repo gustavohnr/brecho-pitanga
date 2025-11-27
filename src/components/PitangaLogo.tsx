@@ -4,7 +4,7 @@ const PitangaLogo = ({ className = "" }: { className?: string }) => (
     viewBox="-5635.3641 -7512.8455 11273.25 13415.0537"
     xmlns="http://www.w3.org/2000/svg"
     role="img"
-    aria-label="Logotipo Brechó da Pitanga"
+    aria-label="Logotipo Pitanga Brecho"
     preserveAspectRatio="xMidYMid meet"
   >
     <g transform="translate(-386.10528564453125 -827.3684692382831)" aria-hidden="true">
