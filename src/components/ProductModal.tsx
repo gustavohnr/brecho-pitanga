@@ -44,7 +44,7 @@ export const ProductModal = ({ peca, isOpen, onClose }: ProductModalProps) => {
           </button>
 
           {/* Gallery */}
-          <div className="md:w-1/2 bg-white p-6 flex flex-col justify-center">
+          <div className="md:w-1/2 bg-white pt-6 pb-0 px-6 flex flex-col justify-center">
             <div className="relative aspect-square w-full rounded-3xl overflow-hidden border border-white/40 shadow-lg bg-white">
               <img
                 src={peca.imagens[currentImageIndex]}
@@ -72,7 +72,7 @@ export const ProductModal = ({ peca, isOpen, onClose }: ProductModalProps) => {
               )}
             </div>
 
-            {peca.imagens.length > 1 && (
+            {false && (
               <div className="mt-4 flex flex-wrap justify-center gap-3">
                 {peca.imagens.map((imagem, index) => (
                   <button
