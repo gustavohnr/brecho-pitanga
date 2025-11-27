@@ -66,7 +66,7 @@ const Contato = () => {
               </h3>
               
               <a
-                href="https://wa.me/5541997132569"
+                href="https://wa.me/554591530101"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-background transition-colors group"
@@ -76,7 +76,7 @@ const Contato = () => {
                 </div>
                 <div>
                   <p className="font-body font-medium text-foreground">WhatsApp</p>
-                  <p className="font-body text-sm text-muted-foreground">(41) 99713-2569</p>
+                  <p className="font-body text-sm text-muted-foreground">+55 45 9153-0101</p>
                 </div>
               </a>
 
@@ -94,7 +94,7 @@ const Contato = () => {
               </a>
 
               <a
-                href="https://instagram.com/brechodapitanga"
+                href="https://instagram.com/dudacareagaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-background transition-colors group"
@@ -104,7 +104,7 @@ const Contato = () => {
                 </div>
                 <div>
                   <p className="font-body font-medium text-foreground">Instagram</p>
-                  <p className="font-body text-sm text-muted-foreground">@brechodapitanga</p>
+                  <p className="font-body text-sm text-muted-foreground">@dudacareagaa</p>
                 </div>
               </a>
             </div>

@@ -108,9 +108,9 @@ const Sobre = () => {
             Temos sempre peças novas chegando. Siga a gente nas redes sociais e seja o primeiro 
             a saber das novidades!
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/5541997132569"
+              href="https://wa.me/554591530101"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-success hover:bg-success-hover text-white font-body font-medium rounded-full transition-colors"
@@ -118,7 +118,7 @@ const Sobre = () => {
               Falar no WhatsApp
             </a>
             <a
-              href="https://instagram.com/brechodapitanga"
+              href="https://instagram.com/dudacareagaa"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-card hover:bg-background border border-border text-foreground font-body font-medium rounded-full transition-colors"

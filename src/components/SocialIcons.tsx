@@ -37,12 +37,12 @@ const SOCIAL_CONFIG: Record<
   { href: string; label: string; Icon: (props: IconProps) => JSX.Element }
 > = {
   instagram: {
-    href: "https://instagram.com/brechodapitanga",
+    href: "https://instagram.com/dudacareagaa",
     label: "Abrir Instagram",
     Icon: InstagramIcon,
   },
   whatsapp: {
-    href: "https://wa.me/5541997132569",
+    href: "https://wa.me/554591530101",
     label: "Conversar no WhatsApp",
     Icon: WhatsAppIcon,
   },
