@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brechó da Pitanga Colors */
+    --background: 330 100% 98%;
+    --foreground: 275 28% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 275 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 275 28% 17%;
+
+    --primary: 342 82% 84%;
+    --primary-foreground: 275 28% 17%;
+    --primary-hover: 342 69% 73%;
+
+    --secondary: 151 41% 81%;
+    --secondary-foreground: 275 28% 17%;
+
+    --muted: 275 13% 49%;
+    --muted-foreground: 275 13% 49%;
+
+    --accent: 260 100% 90%;
+    --accent-foreground: 275 28% 17%;
+
+    --destructive: 0 79% 63%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 285 26% 88%;
+    --input: 285 26% 88%;
+    --ring: 342 82% 84%;
+
+    --success: 142 76% 36%;
+    --success-hover: 142 76% 30%;
+    --warning: 48 87% 62%;
+    --divider: 285 44% 92%;
+
+    --radius: 1rem;
+    --pink-plate-pattern: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23f0adbcff'/><path d='M23.222 25.097l-3.266-2.056-3.219 2.058.983-3.847-3.042-2.503 3.936-.18 1.52-3.668 1.342 3.578 3.846.312-2.996 2.505z'  stroke-linecap='square' stroke-width='1' stroke='%23dbdbdbc4' fill='none'/><path d='M.133-5.1l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848L-.043 3.04l3.264 2.057-.895-3.803L5.322-1.21l-3.845-.312L.133-5.1zm40 0l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848 3.221-2.059 3.264 2.057-.895-3.803 2.996-2.504-3.845-.312L40.133-5.1zm-40 40l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848 3.221-2.059 3.264 2.057-.895-3.803 2.996-2.504-3.845-.312L.133 34.9zm40 0l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848 3.221-2.059 3.264 2.057-.895-3.803 2.996-2.504-3.845-.312-1.344-3.579z'  stroke-linecap='square' stroke-width='1' stroke='%23dedede80' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-80,-80)' fill='url(%23a)'/></svg>");
+    
+    /* Gradients and effects */
+    --gradient-bg: linear-gradient(135deg, hsl(330 100% 98%) 0%, hsl(285 44% 96%) 50%, hsl(260 100% 97%) 100%);
+    --card-shadow: 0 2px 8px -2px hsl(275 28% 17% / 0.08);
+    --card-shadow-hover: 0 8px 24px -4px hsl(275 28% 17% / 0.12);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground font-body;
+    background: white;
+    background-attachment: scroll;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: 0 2px 8px -2px hsl(275 28% 17% / 0.08);
+  }
+  
+  .card-shadow-hover {
+    box-shadow: 0 8px 24px -4px hsl(275 28% 17% / 0.12);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(342 82% 70%), hsl(260 100% 85%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .logo-float {
+    animation: float 3.5s ease-in-out infinite;
+  }
+
+  .header-bg {
+    background-color: #f0adbc;
+    background-image: var(--pink-plate-pattern);
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center top;
+  }
+
+  .navbar-bg {
+    background-color: #f0adbc;
+  }
+
+  .header-bg-contrast {
+    color: #ffffff; /* white text/icons for contrast */
+  }
+
+  /* Full-page decorative background: colored top plate + rest white.
+     It's placed behind everything (z-index: -1) and scrolls with the page (position:absolute). */
+  .page-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    pointer-events: none;
+    /* no background here — body provides the white base */
+  }
+
+  .page-bg-top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 22rem; /* colored top area height */
+    /* SVG pattern as data URI provided by user — fallback to solid color */
+    background-color: #f0adbc;
+    background-image: var(--pink-plate-pattern);
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center top;
+    z-index: -1; /* sit above the repeating pattern but below page content */
+    pointer-events: none;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    overflow: visible;
+  }
+
+  /* Decorative wavy bottom: an SVG pseudo-element that sits at the bottom
+     of the colored top area and creates an ondulation separating it from white.
+     The SVG is white so it visually cuts into the colored area. */
+  .page-bg-top::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 6rem; /* restore smaller wave */
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    pointer-events: none;
+    /* white SVG wave — original smaller wave */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath fill='%23ffffff' d='M0,128L60,122.7C120,117,240,107,360,112C480,117,600,139,720,149.3C840,160,960,160,1080,149.3C1200,139,1320,117,1380,106.7L1440,96L1440,200L0,200Z'/%3E%3C/svg%3E");
+  }
+
+  @media (min-width: 768px) {
+    .page-bg-top::after {
+      height: 9rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .page-bg-top {
+      height: 28rem;
+    }
+  }
+}
