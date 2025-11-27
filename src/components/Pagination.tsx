@@ -40,7 +40,7 @@ export const Pagination = ({ currentPage, totalPages, onPageChange }: Pagination
     "inline-flex items-center justify-center rounded-full font-body text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 disabled:opacity-40 disabled:cursor-not-allowed";
 
   return (
-    <div className="flex justify-center py-10">
+    <div className="flex justify-center pt-10 pb-0">
       <div className="flex items-center gap-2 rounded-full bg-white/70 backdrop-blur px-4 py-2 shadow-lg border border-white/40 text-[#e05284]">
         <button
           className={`${baseButton} w-9 h-9 bg-[#fce4ec] hover:bg-[#f8b5c9]`}

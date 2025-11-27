@@ -98,11 +98,11 @@ export const ProductModal = ({ peca, isOpen, onClose }: ProductModalProps) => {
 
           {/* Content */}
           <div className="md:w-1/2 p-8 space-y-6">
-            <div className="space-y-3">
-              <h2 className="font-heading text-3xl text-foreground leading-tight">
+            <div className="space-y-2">
+              <h2 className="font-heading text-2xl text-foreground leading-tight">
                 {peca.nome}
               </h2>
-              <p className="font-body text-foreground/70">
+              <p className="font-body text-sm text-foreground/70">
                 {peca.descricao}
               </p>
             </div>
@@ -113,11 +113,11 @@ export const ProductModal = ({ peca, isOpen, onClose }: ProductModalProps) => {
                 {peca.tamanho && <span>tamanho</span>}
               </div>
               <div className="flex items-center justify-between gap-4">
-                <p className="font-heading text-4xl text-[#e05284] leading-tight">
+                <p className="font-heading text-2xl text-[#e05284] leading-tight">
                   R$ {peca.preco.toFixed(2)}
                 </p>
                 {peca.tamanho && (
-                  <p className="font-heading text-4xl text-foreground leading-tight">
+                  <p className="font-heading text-lg text-foreground leading-tight">
                     {peca.tamanho}
                   </p>
                 )}
