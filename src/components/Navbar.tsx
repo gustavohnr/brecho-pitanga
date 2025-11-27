@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { NavbarSocialIcons } from '@/components/SocialIcons';
+import { SocialIconLink } from '@/components/SocialIcons';
 
 interface NavbarProps {
   onVisibilityChange?: (visible: boolean) => void;
@@ -9,7 +8,6 @@ interface NavbarProps {
 
 export const Navbar = ({ onVisibilityChange }: NavbarProps) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasHeaderLogo, setHasHeaderLogo] = useState(true);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
@@ -59,12 +57,6 @@ export const Navbar = ({ onVisibilityChange }: NavbarProps) => {
   }, [hasHeaderLogo, isHeaderVisible]);
 
   useEffect(() => {
-    if (!isVisible) {
-      setIsMenuOpen(false);
-    }
-  }, [isVisible]);
-
-  useEffect(() => {
     onVisibilityChange?.(isVisible);
   }, [isVisible, onVisibilityChange]);
 
@@ -74,20 +66,32 @@ export const Navbar = ({ onVisibilityChange }: NavbarProps) => {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <NavbarSocialIcons />
-          <Link to="/" className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-1 justify-start">
+            <SocialIconLink
+              type="instagram"
+              unstyled
+              iconClassName="h-7 w-7"
+            />
+          </div>
+          <Link to="/" className="flex-shrink-0">
             <img
               src="/pitanga-sticker.png"
               alt="Brechó da Pitanga"
               className="w-14 h-14 md:w-16 md:h-16"
             />
           </Link>
+          <div className="flex flex-1 justify-end">
+            <SocialIconLink
+              type="whatsapp"
+              unstyled
+              iconClassName="h-7 w-7"
+            />
+          </div>
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center justify-center gap-6">
           <Link to="/sobre" className="font-body font-medium header-bg-contrast hover:opacity-90 transition-opacity">
             Sobre
           </Link>
@@ -95,42 +99,7 @@ export const Navbar = ({ onVisibilityChange }: NavbarProps) => {
             Contato
           </Link>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2"
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <X className="w-6 h-6 text-white" />
-          ) : (
-            <Menu className="w-6 h-6 text-white" />
-          )}
-        </button>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-card border-t border-border">
-          <div className="flex flex-col py-4">
-            <Link
-              to="/sobre"
-              className="px-4 py-3 font-body font-medium text-foreground hover:bg-primary/10 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Sobre
-            </Link>
-            <Link
-              to="/contato"
-              className="px-4 py-3 font-body font-medium text-foreground hover:bg-primary/10 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contato
-            </Link>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };
