@@ -66,7 +66,7 @@ export const Navbar = ({ onVisibilityChange }: NavbarProps) => {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+      <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-4">
           <div className="flex flex-1 justify-start">
             <SocialIconLink
@@ -89,15 +89,6 @@ export const Navbar = ({ onVisibilityChange }: NavbarProps) => {
               iconClassName="h-7 w-7"
             />
           </div>
-        </div>
-
-        <div className="hidden md:flex items-center justify-center gap-6">
-          <Link to="/sobre" className="font-body font-medium header-bg-contrast hover:opacity-90 transition-opacity">
-            Sobre
-          </Link>
-          <Link to="/contato" className="font-body font-medium header-bg-contrast hover:opacity-90 transition-opacity">
-            Contato
-          </Link>
         </div>
       </div>
     </nav>
