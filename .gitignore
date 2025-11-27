@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Ignore Bun lockfile to avoid CI/build issues on platforms that don't use Bun
+bun.lockb
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
